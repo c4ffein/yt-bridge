@@ -1,0 +1,23 @@
+{
+  "name": "yt-bridge",
+  "module": "src/index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "bun run src/index.ts",
+    "dev": "bun run --watch src/index.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/rss": "^0.0.32"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "hono": "^4.11.5",
+    "rss": "^1.2.2",
+    "yaml": "^2.8.2",
+    "zod": "^4.3.5"
+  }
+}
