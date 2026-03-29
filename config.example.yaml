@@ -1,0 +1,49 @@
+# YT Bridge Configuration
+
+# List of channels to follow
+# Accepts: @handle, channel URL, or channel ID
+channels:
+  - "@3blue1brown"
+  - "@Fireship"
+  - "@ThePrimeTimeagen"
+
+# How often to check for new videos (in minutes)
+pollIntervalMinutes: 60
+
+# Maximum number of recent videos to fetch per channel
+maxVideosPerChannel: 10
+
+# Web server settings
+server:
+  port: 3000
+  host: "localhost"
+
+# Cookies for authentication (required to avoid bot detection)
+# Option 1: Extract from browser (easiest)
+cookies:
+  browser: firefox  # or: chrome, safari, edge, brave, opera, chromium
+
+# Option 2: Use a cookies.txt file
+# cookies:
+#   file: ./cookies.txt
+
+# Optional: LLM for generating summaries
+# Uncomment and configure one of these:
+
+# OpenAI
+# summarizer:
+#   provider: openai
+#   model: gpt-4o-mini
+#   apiKey: sk-...
+
+# Anthropic
+# summarizer:
+#   provider: anthropic
+#   model: claude-3-5-haiku-20241022
+#   apiKey: sk-ant-...
+
+# Ollama (local)
+# summarizer:
+#   provider: ollama
+#   model: llama3.2
+#   baseUrl: http://localhost:11434
