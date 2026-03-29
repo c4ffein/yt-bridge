@@ -1,5 +1,7 @@
 # YT Bridge
 
+> **Work in progress** — This project is under active development and not yet part of my personal workflow. Expect rough edges.
+
 Turn YT channels into readable RSS feeds with transcripts and summaries.
 
 ## Requirements
@@ -58,6 +60,15 @@ Once running, access:
 - `GET /api/videos` - All videos as JSON
 - `POST /api/refresh` - Trigger manual refresh
 - `GET /health` - Health check
+
+## TODO / Improvements
+
+- **Testing** — Add unit tests for VTT parsing and config validation
+- **Storage** — Migrate from JSON file to SQLite (Bun has built-in support)
+- **Error handling** — Add exponential backoff when YouTube rate-limits requests
+- **Code cleanup** — `fetchChannelInfo()` in `fetcher.ts` appears unused
+- **Observability** — Replace `console.log` with structured logging
+- **Configuration** — Make hardcoded values (15K char truncation, `/tmp` paths) configurable; validate that `apiKey` is present when a summarizer provider is set
 
 ## License
 
